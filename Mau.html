@@ -8,6 +8,10 @@
     <style>  
         body {  
             font-family: Arial, sans-serif;  
+            margin: 0;              
+             padding: 0;             
+            overflow-x: hidden;      
+             box-sizing: border-box;
         }  
         .intro {  
             background-color: #f8f9fa;  
@@ -18,9 +22,27 @@
             height: 200px;  
             object-fit: cover;  
         }  
-        footer {  
-            background-color: #f1f1f1;  
-            padding: 20px 0;  
+        .img0{
+            margin-left: -200px;
+        }
+        .footer {  
+            background-color: #222;  
+            padding: 40px 0;  
+            color: #ccc;  
+        }  
+        .footer h4 {  
+            color: #ffcc00; /* Màu tiêu đề */  
+        }  
+        .footer-links a {  
+            color: #ccc;  
+        }  
+        .footer-links a:hover {  
+            color: #ffcc00;  
+        }  
+        .footer img {  
+            width: 100%;  
+            height: auto;  
+            border-radius: 5px;  
         }  
     </style>  
 </head>  
@@ -47,15 +69,18 @@
 </nav>  
 
 <div class="container intro">  
-    <h2>Introduction</h2>  
-    <p>Suspendisse ut magna velit cursus tempor eu nec nunc. Mauris vehicula, augue in tincidunt porta, purus ipsum blandit massa.</p>  
+    <img class="img0"  src="/anh/0.png" alt="">
+    <center>
+        <h2>Introduction</h2>  
+        <p>Suspendisse ut magna velit cursus tempor eu nec nunc. Mauris vehicula, augue in tincidunt porta, purus ipsum blandit massa.</p> </center>
+     
 </div>  
 
 <div class="container">  
     <div class="row">  
         <div class="col-md-3">  
             <div class="card">  
-                <img src="" class="card-img-top" alt="Image 1">  
+                <img src="/anh/1.png" class="card-img-top" alt="Image 1">  
                 <div class="card-body">  
                     <h5 class="card-title">Lorem ipsum dolor #1</h5>  
                     <p class="card-text">Consequat mauris nisl id, lobortis consectetur porttitor pellentesque.</p>  
@@ -66,7 +91,7 @@
         
         <div class="col-md-3">  
             <div class="card">  
-                <img src="image2.jpg" class="card-img-top" alt="Image 2">  
+                <img src="/anh/2.png" class="card-img-top" alt="Image 2">  
                 <div class="card-body">  
                     <h5 class="card-title">Lorem ipsum dolor #2</h5>  
                     <p class="card-text">Consequat mauris nisl id, lobortis consectetur porttitor pellentesque.</p>  
@@ -77,7 +102,7 @@
         
         <div class="col-md-3">  
             <div class="card">  
-                <img src="image3.jpg" class="card-img-top" alt="Image 3">  
+                <img src="/anh/3.png" class="card-img-top" alt="Image 3">  
                 <div class="card-body">  
                     <h5 class="card-title">Lorem ipsum dolor #3</h5>  
                     <p class="card-text">Consequat mauris nisl id, lobortis consectetur porttitor pellentesque.</p>  
@@ -88,7 +113,7 @@
         
         <div class="col-md-3">  
             <div class="card">  
-                <img src="image4.jpg" class="card-img-top" alt="Image 4">  
+                <img src="/anh/4.png" class="card-img-top" alt="Image 4">  
                 <div class="card-body">  
                     <h5 class="card-title">Lorem ipsum dolor #4</h5>  
                     <p class="card-text">Consequat mauris nisl id, lobortis consectetur porttitor pellentesque.</p>  
@@ -102,8 +127,10 @@
         <div class="col-md-8">  
             <h3>Pellentesque fermentum mauris et posuere</h3>  
             <p>Vulputate accumsan blandit, egestas libero efficitur sapien.</p>  
-            <img src="coffee.jpg" class="img-fluid" alt="Coffee">  
-            <p>Donec tempor lobortis tortor, in lacinia metus mollis sed. Ut id, dignissim vitae, ultricies velit. Nullam volutpat semper nisi, ac sollicitudin libero interdum vitae.</p>  
+            <img src="/anh/5.png" class="img-fluid" alt="Coffee">  
+            <p>Donec tempor lobortis tortor, in feugiat massa facilisis sed. Ut dignissim viverra pretium. In eu justo maximus turpis feugiat finibus scelerisque nec eros. Cras nec lectus tempor nibh vestibulum eleifend et ac elit.</p>  
+            <p>Morbi vel pharetra massa, non iaculis tortor. Nulla porttitor tincidunt felis et feugiat. Vividus fermentum ligula justo, sit amet blandit nisl volutpat id. Fusce sagittis ultriices felis, non luctus mauris lacinia quis.</p>  
+            <p>Ut fringilla lacus ac tempor ullamcorper. Mauris iaculis placerat ex et mattis. Mauris id vulputate lectus, id fermentum sapien.</p>  
             <a href="#" class="btn btn-primary">READ MORE</a>  
         </div>  
 
@@ -133,15 +160,55 @@
     </ul>  
 </div>  
 
-<footer class="text-center">  
-    <div class="container">  
-        <p>Proin eu posuere felis</p>  
-        <p>Nulla tortor dolor</p>  
-        <p>Eiam mollis ornare</p>  
-        <p>Fusce non turpis</p>  
-        <p><small>Copyright &copy; 2024</small></p>  
-    </div>  
-</footer>  
+    <footer class="footer text-light">  
+        <div class="container">  
+            <div class="row">  
+                <div class="col-md-3">  
+                    <h4>Proin eu posuere felis</h4>  
+                    <p>Classic is free HTML CSS website template provided by templatemo for everyone. Feel free to use it.</p>  
+                    <p>Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>  
+                    <p><strong>Danny Egg (Executive)</strong></p>  
+                </div>  
+                <div class="col-md-3">  
+                    <h4>Nulla tortor dolor</h4>  
+                    <ul class="list-unstyled footer-links">  
+                        <li><a href="#">Tincidunt non faucibus</a></li>  
+                        <li><a href="#">Vestibulum tempor</a></li>  
+                        <li><a href="#">Fusce non turpis euismod</a></li>  
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>  
+                        <li><a href="#">Nam in augue consectetur</a></li>  
+                    </ul>  
+                </div>  
+                <div class="col-md-3">  
+                    <h4>Etiam mollis ornare</h4>  
+                    <p>Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>  
+                    <hr>  
+                    <p>Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>  
+                    <button class="btn btn-light">READ MORE</button>  
+                </div>  
+                <div class="col-md-3">  
+                    <h4>Fusce non turpis</h4>  
+                    <div class="row">  
+                        <div class="col-4">  
+                            <img src="/anh/10.png" alt="Image 1">  
+                        </div>  
+                        <div class="col-4">  
+                            <img src="/anh/11.png" alt="Image 2">  
+                        </div>  
+                        <div class="col-4">  
+                            <img src="/anh/12.png" alt="Image 3">  
+                        </div>  
+                    </div>  
+                    <p>Curabitur dui massa, aliquam quis mi sed, tempor vulputate tellus. Sed vestibulum non neque.</p>  
+                    <button class="btn btn-outline-light">BROWSE</button>  
+                </div>  
+            </div>  
+        </div>  
+        <div class="text-center mt-4">  
+            <p>&copy; 2016 Your Company Name</p>  
+        </div>  
+    </footer>  
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>  
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>  
