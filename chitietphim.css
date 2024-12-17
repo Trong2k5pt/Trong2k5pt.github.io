@@ -1,0 +1,78 @@
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+header {  
+    background: #f0e68c;  
+    padding: 10px;  
+    text-align: center;  
+}  
+
+nav a {  
+    margin: 0 15px;  
+    text-decoration: none;  
+    color: #000;  
+}  
+
+main {  
+    padding: 20px;  
+}  
+
+.film-container {  
+    display: flex;  
+    padding: 20px;  
+}  
+
+.film-image img {  
+    max-width: 100%;  
+}  
+
+.film-info {  
+    flex: 1;  
+    padding: 20px;  
+}  
+
+footer {  
+    text-align: center;  
+    background: #f0e68c;  
+    padding: 10px;  
+}  
+.cast {  
+    display: flex;  
+    justify-content: space-between;  
+    margin-top: 10px;  
+}  
+
+.actor {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    text-align: center;  
+    margin: 0 10px;  
+}  
+
+.actor-icon {  
+    width: 50px;  
+    height: 50px;  
+    border-radius: 50%;   
+    background-color: #00A2E0; /* Màu nền cho biểu tượng */  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    color: white; /* Màu cho biểu tượng */  
+    font-size: 24px; /* Kích thước chữ trong biểu tượng */  
+}  
+
+.actor span {  
+    margin-top: 5px;   
+    color: green; /* Màu chữ tên diễn viên */  
+}
+
+/* Responsive Design */  
+@media (max-width: 600px) {  
+    .film-container {  
+        flex-direction: column;  
+    }  
+}

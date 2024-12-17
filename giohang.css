@@ -1,0 +1,62 @@
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+header {  
+    background: #f0e68c;  
+    padding: 10px;  
+    text-align: center;  
+}  
+
+nav a {  
+    margin: 0 15px;  
+    text-decoration: none;  
+    color: #000;  
+}  
+
+main {  
+    padding: 20px;  
+}  
+
+.cart {  
+    padding: 20px;  
+}  
+
+.cart-items {  
+    display: flex;  
+    flex-direction: column;  
+}  
+
+.cart-item {  
+    display: flex;  
+    align-items: center;  
+    justify-content: space-between;  
+    margin: 10px 0;  
+    padding: 10px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+}  
+
+.cart-item img {  
+    max-width: 100px; /* Kích thước hình ảnh sản phẩm */  
+    margin-right: 10px;  
+}  
+
+.book-ticket {  
+    padding: 5px 10px;  
+    background-color: #28a745;  
+    color: white;  
+    border: none;  
+    cursor: pointer;  
+}  
+.book-ticket:hover{
+    background-color: blue;
+}
+
+footer {  
+    text-align: center;  
+    background: #f0e68c;  
+    padding: 10px;  
+}

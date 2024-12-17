@@ -1,0 +1,65 @@
+<!DOCTYPE html>  
+<html lang="vi">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="giohang.css">  
+    <title>Giỏ Hàng</title>  
+</head>  
+<body>  
+    <header>  
+        <h1>My Shop</h1>  
+        <nav>  
+            <a href="giohang.html">Giỏ hàng</a>  
+            <a href="chitietphim.html">Chi tiết phim</a>  
+            <a href="chitietsanpham.html">Chi tiết sản phẩm</a>  
+        </nav>  
+    </header>  
+
+    <main>  
+        <section id="shop">  
+            <h2>Giỏ Hàng Của Bạn</h2>  
+            <form>  
+                <h3>Thông tin của bạn</h3>  
+                <label for="name">Họ Và Tên</label>  
+                <input type="text" id="name" required>  
+                <label for="phone">Số Điện Thoại</label>  
+                <input type="tel" id="phone" required>  
+                <label for="address">Địa Chỉ</label>  
+                <input type="text" id="address" required>  
+
+                <h3>Phương Thức Thanh Toán*</h3>  
+                <label><input type="radio" name="payment" value="credit-card"> Thẻ Tính Dụng</label>  
+                <label><input type="radio" name="payment" value="bank"> Ngân Hàng</label>  
+                <label><input type="radio" name="payment" value="momo"> Momo</label>  
+            </form>  
+            <section class="cart">  
+                <h3>Cart</h3>  
+                <div class="cart-items">  
+                    <div class="cart-item">  
+                        <img src="/ảnh/1.png" alt="Movie 1">  
+                        <div>Unknown Battle</div>  
+                        <span>2</span>  
+                        <button>Remove</button>  
+                        <span>Total: \$210</span>  
+                        <button class="book-ticket">Đặt vé</button>  
+                    </div>  
+                    <div class="cart-item">  
+                        <img src="/ảnh/2.png" alt="Movie 2">  
+                        <div>Some Other Movie</div>  
+                        <span>1</span>  
+                        <button>Remove</button>  
+                        <span>Total: \$105</span>  
+                        <button class="book-ticket">Đặt vé</button>  
+                    </div>  
+                </div>  
+                <button>Gửi</button>  
+            </section>  
+        </section>  
+    </main>  
+
+    <footer>  
+        <p>&copy; 2024 My Shop</p>  
+    </footer>  
+</body>  
+</html>

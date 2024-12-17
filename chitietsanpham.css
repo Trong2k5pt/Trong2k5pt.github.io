@@ -1,0 +1,48 @@
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+header {  
+    background: #f0e68c;  
+    padding: 10px;  
+    text-align: center;  
+}  
+
+nav a {  
+    margin: 0 15px;  
+    text-decoration: none;  
+    color: #000;  
+}  
+
+main {  
+    padding: 20px;  
+}  
+
+.product-container {  
+    display: flex;  
+    padding: 20px;  
+}  
+
+.product-image img {  
+    max-width: 100%;  
+}  
+
+.product-details {  
+    flex: 1;  
+    padding: 20px;  
+}  
+
+footer {  
+    text-align: center;  
+    background: #f0e68c;  
+    padding: 10px;  
+}  
+
+/* Responsive Design */  
+@media (max-width: 600px) {  
+    .product-container {  
+        flex-direction: column;  
+    }  
+}
