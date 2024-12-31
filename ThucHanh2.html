@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Khai báo mảng s gồm các chuỗi bất kỳ  
+let s = ["apple", "banana", "kiwi", "cherry", "blueberry", "fig", "grape"];  
+
+// Nhập vào chuỗi text  
+let text = prompt("Nhập vào một chuỗi text:");  
+
+// 1. Tìm chuỗi đầu tiên có độ dài nhỏ nhất trong mảng  
+let minLengthString = s.reduce((minStr, currentStr) => {  
+    return currentStr.length < minStr.length ? currentStr : minStr;  
+}, s[0]);  
+console.log("Chuỗi đầu tiên có độ dài nhỏ nhất:", minLengthString);  
+
+// 2. Tìm những chuỗi trong mảng có chứa giá trị text  
+let containsText = s.filter(str => str.includes(text));  
+console.log("Những chuỗi trong mảng có chứa giá trị text:", containsText);  
+
+// 3. Tạo mảng mới newS gồm các phần tử là 3 ký tự đầu tiên của từng phần tử trong s  
+let newS = s.map(str => str.slice(0, 3));  
+console.log("Mảng newS gồm các phần tử là 3 ký tự đầu tiên:", newS);  
+
+// 4. Tạo ra chuỗi kết hợp các phần tử trong s, mỗi phần tử cách nhau bởi dấu '-'  
+let combinedString = s.join('-');  
+console.log("Chuỗi kết hợp các phần tử trong s:", combinedString);
+    </script>
+</body>
+</html>

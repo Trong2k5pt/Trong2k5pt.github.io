@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+let numbers = [10, 20, 30, 40];  
+
+
+console.log("Phần tử có chỉ số 0:", numbers[0]); 
+console.log("Phần tử có chỉ số 3:", numbers[3]); 
+
+
+let sum = numbers[1] + numbers[2];  
+console.log("Tổng của phần tử chỉ số 1 và 2:", sum); 
+
+
+let temp = numbers[1]; 
+numbers[1] = numbers[3];  
+numbers[3] = temp; 
+console.log("Mảng sau khi hoán đổi giá trị của chỉ số 1 và 3:", numbers);
+    </script>
+</body>
+</html>

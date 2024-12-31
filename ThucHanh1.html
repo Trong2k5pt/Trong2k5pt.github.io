@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Khai báo mảng với các số bất kỳ   
+// Bạn có thể thay đổi các số trong mảng này theo ý muốn  
+let numbers = [25, 15, 2, 30, 20, 7, 99, 1];  
+
+// 1. Tính tích của các phần tử trong mảng  
+let product = numbers.reduce((accumulator, current) => accumulator * current, 1);  
+console.log("Tích của các phần tử trong mảng:", product);  
+
+// 2. Tìm số nhỏ nhất mà chia hết cho 2 trong mảng  
+let smallestEven = numbers.filter(num => num % 2 === 0).reduce((a, b) => Math.min(a, b), Infinity);  
+if (smallestEven === Infinity) {  
+    console.log("Không có số nào chẵn trong mảng.");  
+} else {  
+    console.log("Số nhỏ nhất mà chia hết cho 2:", smallestEven);  
+}  
+
+// 3. Tìm số lớn nhất mà chia hết cho 3 trong mảng  
+let largestDivisibleByThree = numbers.filter(num => num % 3 === 0).reduce((a, b) => Math.max(a, b), -Infinity);  
+if (largestDivisibleByThree === -Infinity) {  
+    console.log("Không có số nào chia hết cho 3 trong mảng.");  
+} else {  
+    console.log("Số lớn nhất mà chia hết cho 3:", largestDivisibleByThree);  
+}  
+
+// 4. Tính giá trị trung bình của mảng  
+let average = product / numbers.length;  
+console.log("Giá trị trung bình của mảng:", average);  
+
+// 5. Lọc ra các số nguyên tố trong mảng  
+function isPrime(num) {  
+    if (num <= 1) return false;  
+    for (let i = 2; i <= Math.sqrt(num); i++) {  
+        if (num % i === 0) return false;  
+    }  
+    return true;  
+}  
+let primeNumbers = numbers.filter(isPrime);  
+console.log("Các số nguyên tố trong mảng:", primeNumbers);  
+
+// 6. Kiểm tra xem trong mảng có số nhỏ hơn 10 hay không  
+let hasLessThanTen = numbers.some(num => num < 10);  
+console.log("Có số nhỏ hơn 10 trong mảng:", hasLessThanTen);  
+
+// 7. Kiểm tra xem tất cả phần tử trong mảng có lớn hơn 20 không  
+let allGreaterThanTwenty = numbers.every(num => num > 20);  
+console.log("Tất cả phần tử trong mảng có lớn hơn 20 không:", allGreaterThanTwenty);  
+
+// 8. Nhập vào số n cho đến khi n là một số trong mảng s  
+let n;  
+do {  
+    n = parseFloat(prompt("Nhập số n (cho đến khi n là một số trong mảng):"));  
+} while (!numbers.includes(n));  
+console.log("Bạn đã nhập số n:", n);  
+
+// 9. Sử dụng thuật toán Bubble Sort để sắp xếp phần tử theo thứ tự tăng dần  
+function bubbleSort(arr) {  
+    let len = arr.length;  
+    for (let i = 0; i < len - 1; i++) {  
+        for (let j = 0; j < len - 1 - i; j++) {  
+            if (arr[j] > arr[j + 1]) {  
+                // Hoán đổi  
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];  
+            }  
+        }  
+    }  
+    return arr;  
+}  
+
+let sortedNumbers = bubbleSort([...numbers]); // Sắp xếp một bản sao của mảng  
+console.log("Mảng sau khi sắp xếp theo thứ tự tăng dần:", sortedNumbers);
+    </script>
+</body>
+</html>

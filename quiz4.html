@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Khai báo mảng rỗng  
+let randomNumbers = [];  
+
+// Nhập vào số n (n > 0)  
+let n = parseInt(prompt("Nhập vào số nguyên dương n (n > 0):"));  
+
+// Kiểm tra nếu n hợp lệ  
+if (n > 0) {  
+    // Điền n số ngẫu nhiên vào mảng  
+    for (let i = 0; i < n; i++) {  
+        // Tạo một số ngẫu nhiên trong khoảng từ 1 đến 100  
+        let randomValue = Math.floor(Math.random() * 100) + 1;   
+        randomNumbers.push(randomValue); // Thêm số ngẫu nhiên vào mảng  
+    }  
+    
+    // In ra mảng đã được điền số ngẫu nhiên  
+    console.log("Mảng số ngẫu nhiên:", randomNumbers);  
+} else {  
+    console.log("Vui lòng nhập một số nguyên dương n (n > 0).");  
+}
+    </script>
+</body>
+</html>

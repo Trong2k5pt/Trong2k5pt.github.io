@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Nhập vào dãy số s và số n  
+let s = prompt("Nhập vào dãy số (các số cách nhau bởi dấu ',' ):");  
+let n = parseFloat(prompt("Nhập vào số n:"));  
+
+// Chuyển dãy số s thành mảng số thông qua split và map  
+let numbers = s.split(',').map(num => parseFloat(num.trim()));  
+
+// 1. In ra dãy số mới gồm các phần tử là bình phương của các số trong dãy s  
+let squaredNumbers = numbers.map(num => num ** 2);  
+console.log("Dãy số bình phương:", squaredNumbers);  
+
+// 2. Tìm tất cả số trong dãy s có giá trị lớn hơn hoặc bằng n  
+let filteredNumbers = numbers.filter(num => num >= n);  
+console.log("Các số lớn hơn hoặc bằng n:", filteredNumbers);  
+
+// 3. Tìm 1 số đầu tiên trong dãy s có giá trị bằng n  
+let firstEqualN = numbers.find(num => num === n);  
+if (firstEqualN !== undefined) {  
+    console.log("Số đầu tiên có giá trị bằng n:", firstEqualN);  
+} else {  
+    console.log("Không có số nào có giá trị bằng n trong dãy s.");  
+}
+    </script>
+</body>
+</html>

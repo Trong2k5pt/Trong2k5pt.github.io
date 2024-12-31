@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Nhập vào 2 dãy số d1 và d2, mỗi số cách nhau bởi dấu ','  
+let d1 = prompt("Nhập vào dãy số d1 (các số cách nhau bởi dấu ','):").split(',').map(Number);  
+let d2 = prompt("Nhập vào dãy số d2 (các số cách nhau bởi dấu ','):").split(',').map(Number);  
+
+// 1. Kiểm tra xem tất cả các giá trị số trong d1 có nằm trong d2 không  
+let allInD2 = d1.every(num => d2.includes(num));  
+console.log("Tất cả các giá trị số trong d1 có nằm trong d2 không:", allInD2);  
+
+// 2. Kiểm tra xem có phần tử nào trong d2 chia hết cho tổng của d1 không  
+let sumD1 = d1.reduce((acc, curr) => acc + curr, 0);  
+let anyDivisibleBySum = d2.some(num => num % sumD1 === 0);  
+console.log("Có phần tử nào trong d2 chia hết cho tổng của d1 không:", anyDivisibleBySum);  
+
+// 3. Tạo mảng mới gồm các số có giá trị là các số chia hết cho 2 lần lượt trong d2 và d1  
+let evenNumbers = [...d2, ...d1].filter(num => num % 2 === 0);  
+console.log("Mảng mới gồm các số chia hết cho 2:", evenNumbers);  
+
+// 4. Sử dụng core của thuật toán Merge Sort để tạo dãy số sắp xếp theo thứ tự tăng dần  
+function mergeSort(arr) {  
+    if (arr.length <= 1) {  
+        return arr;  
+    }  
+
+    const mid = Math.floor(arr.length / 2);  
+    const left = mergeSort(arr.slice(0, mid));  
+    const right = mergeSort(arr.slice(mid));  
+
+    return merge(left, right);  
+}  
+
+function merge(left, right) {  
+    let result = [];  
+    let i = 0;  
+    let j = 0;  
+
+    // Gộp hai mảng lại theo thứ tự  
+    while (i < left.length && j < right.length) {  
+        if (left[i] < right[j]) {  
+            result.push(left[i]);  
+            i++;  
+        } else {  
+            result.push(right[j]);  
+            j++;  
+        }  
+    }  
+
+    // Thêm phần còn lại của mảng nếu còn  
+    return result.concat(left.slice(i)).concat(right.slice(j));  
+}  
+
+// Kết hợp d1 và d2 rồi sắp xếp  
+let mergedArray = mergeSort([...d1, ...d2]);  
+console.log("Dãy số theo thứ tự tăng dần gồm các số của d1 và d2:", mergedArray);
+    </script>
+</body>
+</html>

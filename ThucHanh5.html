@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Tạo ra một mảng gồm các số bất kỳ  
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; // Bạn có thể thay đổi các số trong mảng này  
+
+// Tính tổng các số lẻ trong mảng  
+let sumOfOddNumbers = numbers.filter(num => num % 2 !== 0)  // Lọc ra các số lẻ  
+                             .reduce((sum, num) => sum + num, 0); // Tính tổng  
+
+console.log("Tổng của các số lẻ trong mảng là:", sumOfOddNumbers);
+    </script>
+</body>
+</html>

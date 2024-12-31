@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Khai báo mảng đa chiều biểu thị mức độ tăng trưởng của công ty  
+let growth = [  
+    [5, 8, 9, 16],  
+    [2, 7, 1, 9],  
+    [5, 6, 8, 12],  
+    [10, 2, 1, 8],  
+    [20, 4, 9, 1]  
+];  
+
+// 1. Tạo mảng mới gồm các phần tử có giá trị là trung bình tăng trưởng của từng năm (Tính trung bình theo hàng)  
+let averageGrowthByYear = growth.map(year => {  
+    return year.reduce((sum, value) => sum + value, 0) / year.length;  
+});  
+console.log("Trung bình tăng trưởng của từng năm:", averageGrowthByYear);  
+
+// 2. Tìm giá trị tăng trưởng trung bình theo năm lớn nhất  
+let maxAverageGrowth = Math.max(...averageGrowthByYear);  
+console.log("Giá trị tăng trưởng trung bình theo năm lớn nhất:", maxAverageGrowth);  
+
+// 3. Tìm giá trị tăng trưởng theo quý lớn nhất  
+let maxGrowthByQuarter = Math.max(...growth.flat());  
+console.log("Giá trị tăng trưởng theo quý lớn nhất:", maxGrowthByQuarter);  
+
+// 4. Tính giá trị tăng trưởng trung bình theo quý của các năm (Tính trung bình theo cột)  
+let averageGrowthByQuarter = [];  
+let totalYears = growth.length;  
+
+// Chúng ta cần lặp qua từng quý (cột) để tính trung bình  
+for (let i = 0; i < growth[0].length; i++) {  
+    let sum = 0;  
+    for (let j = 0; j < totalYears; j++) {  
+        sum += growth[j][i];  
+    }  
+    averageGrowthByQuarter[i] = sum / totalYears;  
+}  
+console.log("Trung bình tăng trưởng theo quý của các năm:", averageGrowthByQuarter);
+    </script>
+</body>
+</html>
